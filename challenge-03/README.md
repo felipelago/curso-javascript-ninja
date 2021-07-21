@@ -16,7 +16,7 @@ As propriedades e tipos de valores para cada propriedade desse objeto devem ser:
 - `andando` - Boolean - recebe "falso" por padrão
 - `caminhouQuantosMetros` - Number - recebe "zero" por padrão
 */
-let pessoa = {nome: 'Felipe', sobrenome: 'Lago', idade: 27, altura: '1.72', peso: 98, andando: false, caminhouQuantosMetros: 0}
+let pessoa = {nome: 'Felipe', sobrenome: 'Lago', sexo: 'masculino', idade: 27, altura: '1.72', peso: 98, andando: false, caminhouQuantosMetros: 0}
 
 /*
 Adicione um método ao objeto `pessoa` chamado `fazerAniversario`. O método deve
@@ -168,8 +168,23 @@ deve conter no retorno da frase acima é "metro" no lugar de "metros".
 método), que será concatenada com a frase de retorno, mostrando a resposta
 correta, de acordo com os dados inseridos no objeto.
 */
-?
+pessoa.apresentacao = function(){
+   let sexo = 'o';
+   let idade = 'anos';
+   let metrosCaminhados = 'metros';
+   
+   if(pessoa.sexo === 'Feminino'){
+    sexo = 'a';
+   }
+   if(pessoa.idade === 1 ){
+    idade = 'ano';
+   }
+  if (pessoa.caminhouQuantosMetros === 1) {
+    metrosCaminhados = 'metro';
+  }
+
+  return 'Olá, eu sou ' + sexo + ' ' + pessoa.nome + ' ' + pessoa.sobrenome + ', tenho ' + pessoa.idade + ' ' + idadeAnos + ', ' + pessoa.altura + ', meu peso é ' + pessoa.peso + ' e, só hoje, eu já caminhei ' + pessoa.caminhouQuantosMetros + ' ' + metrosCaminhados + '!';
+};
 
 // Agora, apresente-se ;)
-?
-```
+pessoa.apresentacao(); //
