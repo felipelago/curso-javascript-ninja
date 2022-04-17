@@ -15,7 +15,7 @@ let funcao = soma(1+5)+5;
 11
 
 // Declare uma nova variável, sem valor.
-let semvalor = ;
+let semvalor;
 
 /*
 Crie uma função que adicione um valor à variável criada acima, e retorne a string:
@@ -23,7 +23,8 @@ Crie uma função que adicione um valor à variável criada acima, e retorne a s
 Onde VALOR é o novo valor da variável.
 */
 function valor(){
-return semvalor = 'VALOR';
+semvalor = 25;
+return 'O valor da variável agora é' + semvalor;
 
 // Invoque a função criada acima.
 ?
