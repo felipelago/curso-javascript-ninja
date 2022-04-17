@@ -12,17 +12,18 @@ return num1+num2;
 let funcao = soma(1+5)+5;
 
 // Qual o valor atualizado dessa variável?
-?
+11
 
 // Declare uma nova variável, sem valor.
-?
+let semvalor = ;
 
 /*
 Crie uma função que adicione um valor à variável criada acima, e retorne a string:
     O valor da variável agora é VALOR.
 Onde VALOR é o novo valor da variável.
 */
-?
+function valor(){
+return semvalor = 'VALOR';
 
 // Invoque a função criada acima.
 ?
