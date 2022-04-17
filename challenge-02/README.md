@@ -27,10 +27,10 @@ semvalor = 25;
 return 'O valor da variável agora é' + semvalor;
 
 // Invoque a função criada acima.
-?
+valor()
 
 // Qual o retorno da função? (Use comentários de bloco).
-?
+/*O valor da variável agora é 25*/
 
 /*
 Crie uma função com as seguintes características:
@@ -39,10 +39,15 @@ Crie uma função com as seguintes características:
     Preencha todos os valores corretamente!
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
-?
-
+function argumentos(x,y,z){
+  if (x && y && z == 0){
+    return 'Preencha todos os valores corretamente!'
+  }else{
+  return (x*y*z)+2;}
+}
+  
 // Invoque a função criada acima, passando só dois números como argumento.
-?
+argumentos(1,2)
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
 ?
