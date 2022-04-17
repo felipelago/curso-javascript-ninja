@@ -9,7 +9,7 @@ return num1+num2;
 }
 
 // Declare uma variável que receba a invocação da função criada acima, passando dois números quaisquer por argumento, e somando `5` ao resultado retornado da função.
-let
+let funcao = soma(1+5)+5;
 
 // Qual o valor atualizado dessa variável?
 ?
