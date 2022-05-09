@@ -1,3 +1,5 @@
+=== Challenge 14 ===
+
 /*
 Envolva todo o código desse desafio em uma IIFE.
 */
@@ -10,14 +12,20 @@ Os números devem ser de 1 a 10.
 Mostre esse array no console.
 */
 console.log( 'Number Objects Array:' );
-// ?
+let numberObjects = []
+for(let i = 0; i <= 10; i++){
+    numberObjects.push({number: i})
+}
+console.log(numberObjects)
 
 /*
 Crie um array chamado `justNumbers`, que terá como elementos somente os
 números do array criado acima. Mostre esse novo array no console.
 */
 console.log( '\nJust Numbers:' );
-// ?
+let justNumbers = numberObjects.map((item) => {
+    return item.number;
+})
 
 /*
 Crie um novo array chamado `justMod2Or3`, que receberá do array criado acima
@@ -25,7 +33,10 @@ somente os números que forem divisíveis por 2 ou 3. Mostre esse novo array
 no console.
 */
 console.log( '\nJust module of division by 2 or 3:' );
-// ?
+let justMod20r3 = justNumbers.filter((item) => {
+    return item % 2 === 0 || item % 3 === 0;
+})
+console.log(justMod20r3);
 
 /*
 Declare uma variável chamada operation que receba, do array criado acima,
@@ -36,7 +47,10 @@ O cálculo deve começar com zero.
 Mostre o resultado no console.
 */
 console.log( '\nOperation:' );
-// ?
+let operation = justMod20r3.reduce( (acumulado, atual) => {
+    return (acumulado + 1) * atual;
+})
+console.log(operation);
 
 /*
 Faça o mesmo cálculo passado acima, mas começando do último item para o
@@ -44,7 +58,10 @@ primeiro. O nome da variável deve ser operation2. Mostre o resultado no
 console.
 */
 console.log( '\nOperation 2:' );
-// ?
+let operation2 = justMod20r3.reduceRight((acumulado, atual) => {
+    return (acumulado + 1) * atual;
+})
+console.log(operation2);
 
 /*
 Crie um array chamado `name`. Cada elemento desse array deve ser uma sílaba
@@ -55,20 +72,23 @@ infantil, onde você coloca a letra "P" antes de cada sílaba de uma palavra
 falada, como se você estivesse falando em código xD
 */
 console.log( '\nSeu nome na língua do "P":' );
-// ?
+let name = ['F', 'e', 'l', 'i', 'p', 'e'];
 
 /*
 Crie uma variável chamada `inversedName`, que reduzirá o array em uma string
 e atribuirá o seu nome invertido (usando o array criado acima).
 */
 console.log( '\nInversed Name:' );
-// ?
+let inversedName = name.reduceRight((acumulado, atual) => {
+    return acumulado + atual;
+})
+console.log(inversedName);
 
 /*
 Mostre no console o array `numberObjects`.
 */
 console.log( '\nNumber objects' );
-// ?
+console.log(numberObjects);
 
 /*
 Verifique se existem em algum índice de numberObjects um objeto ìgual a
@@ -80,7 +100,9 @@ Consegue prever o resultado? Deixe uma mensagem no console tentando explicar
 o que acontece ;)
 */
 console.log( '\nExiste um { number: 2 } em numberObjects?' );
-// ?
+if (numberObjects.indexOf({number: 2})){
+
+}
 
 /*
 Fazendo o mesmo do exercício acima, mas começando a buscar do último índice,
@@ -94,4 +116,6 @@ Verifique se `justMod2Or3` é um array. Se for, mostre-o no console, no
 formato de String.
 */
 console.log( '\njustMod2Or3 é um array? Se for, a representação dele em String é:' );
-// ?
+if(Array.isArray(justMod20r3)){
+    console.log(justMod20r3.toString());
+}
